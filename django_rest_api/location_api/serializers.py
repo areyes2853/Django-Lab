@@ -1,7 +1,7 @@
 from rest_framework import serializers 
-from .models import Contact 
+from .models import Location 
 
-class ContactSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
+class LocationSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
-        model = Contact # tell django which model to use
+        model = Location # tell django which model to use
         fields = ('id', 'street', 'city','state') # tell django which fields to include

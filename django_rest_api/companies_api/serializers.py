@@ -1,7 +1,7 @@
 from rest_framework import serializers 
-from .models import Contact 
+from .models import Company 
 
-class ContactSerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
+class CompanySerializer(serializers.ModelSerializer): # serializers.ModelSerializer just tells django to convert sql to JSON
     class Meta:
-        model = Contact # tell django which model to use
+        model = Company # tell django which model to use
         fields = ('id', 'name', 'industry',) # tell django which fields to include
